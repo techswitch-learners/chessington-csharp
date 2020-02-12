@@ -137,5 +137,71 @@ namespace Chessington.GameEngine.Tests.Pieces
 
             moves.Should().NotContain(Square.At(3, 3));
         }
+        
+                [Test]
+        public void BlackPawns_CanMoveDiagonally_IfThereIsAPieceToTake()
+        {
+            var board = new Board();
+            var pawn = new Pawn(Player.Black);
+            var firstTarget = new Pawn(Player.White);
+            var secondTarget = new Pawn(Player.White);
+            board.AddPiece(Square.At(5, 3), pawn);
+            board.AddPiece(Square.At(6, 4), firstTarget);
+            board.AddPiece(Square.At(6, 2), secondTarget);
+
+            var moves = pawn.GetAvailableMoves(board).ToList();
+
+            moves.Should().Contain(Square.At(6, 2));
+            moves.Should().Contain(Square.At(6, 4));
+        }
+
+        [Test]
+        public void WhitePawns_CanMoveDiagonally_IfThereIsAPieceToTake()
+        {
+            var board = new Board();
+            var pawn = new Pawn(Player.White);
+            var firstTarget = new Pawn(Player.Black);
+            var secondTarget = new Pawn(Player.Black);
+            board.AddPiece(Square.At(7, 3), pawn);
+            board.AddPiece(Square.At(6, 4), firstTarget);
+            board.AddPiece(Square.At(6, 2), secondTarget);
+
+            var moves = pawn.GetAvailableMoves(board).ToList();
+
+            moves.Should().Contain(Square.At(6, 2));
+            moves.Should().Contain(Square.At(6, 4));
+        }
+
+        [Test]
+        public void BlackPawns_CannotMoveDiagonally_IfThereIsNoPieceToTake()
+        {
+            var board = new Board();
+            var pawn = new Pawn(Player.Black);
+            board.AddPiece(Square.At(5, 3), pawn);
+
+            var friendlyPiece = new Pawn(Player.Black);
+            board.AddPiece(Square.At(6, 2), friendlyPiece);
+
+            var moves = pawn.GetAvailableMoves(board).ToList();
+
+            moves.Should().NotContain(Square.At(6, 2));
+            moves.Should().NotContain(Square.At(6, 4));
+        }
+
+        [Test]
+        public void WhitePawns_CannotMoveDiagonally_IfThereIsNoPieceToTake()
+        {
+            var board = new Board();
+            var pawn = new Pawn(Player.White);
+            board.AddPiece(Square.At(7, 3), pawn);
+
+            var friendlyPiece = new Pawn(Player.White);
+            board.AddPiece(Square.At(6, 2), friendlyPiece);
+
+            var moves = pawn.GetAvailableMoves(board).ToList();
+
+            moves.Should().NotContain(Square.At(6, 2));
+            moves.Should().NotContain(Square.At(6, 4));
+        }
     }
 }
