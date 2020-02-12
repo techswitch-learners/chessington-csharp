@@ -1,0 +1,63 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <UseWPF>true</UseWPF>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Chessington.GameEngine\Chessington.GameEngine.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Icons\black-rook.ico" />
+      <Content Include="Icons\black-rook.ico">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Icons\black-bishop.ico" />
+      <Content Include="Icons\black-bishop.ico">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <Content Include="Icons\black-king.ico">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Icons\black-knight.ico" />
+      <Content Include="Icons\black-knight.ico">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Icons\black-pawn.ico" />
+      <Content Include="Icons\black-pawn.ico">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Icons\black-queen.ico" />
+      <Content Include="Icons\black-queen.ico">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Icons\white-bishop.ico" />
+      <Content Include="Icons\white-bishop.ico">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Icons\white-king.ico" />
+      <Content Include="Icons\white-king.ico">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Icons\whtie-knight.ico" />
+      <Content Include="Icons\white-knight.ico">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Icons\white-pawn.ico" />
+      <Content Include="Icons\white-pawn.ico">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Icons\white-queen.ico" />
+      <Content Include="Icons\white-queen.ico">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Icons\white-rook.ico" />
+      <Content Include="Icons\white-rook.ico">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+
+</Project>

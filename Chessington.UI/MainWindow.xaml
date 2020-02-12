@@ -1,0 +1,24 @@
+﻿<Window x:Class="Chessington.UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="525" Width="525">
+    <StackPanel Orientation="Horizontal">
+        <Border BorderBrush="#FFC7A13B" BorderThickness="2" CornerRadius="1">
+            <StackPanel x:Name="GridContainer" HorizontalAlignment="Center" VerticalAlignment="Center">
+            </StackPanel>
+        </Border>
+        <StackPanel Orientation="Vertical">
+            <TextBlock Text="{Binding CurrentPlayer}" FontWeight="Bold" FontSize="14" />
+            <ListView ItemsSource="{Binding CapturedPieces}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Image Source="{Binding}" Width="40" Height="40"></Image>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackPanel>
+    </StackPanel>
+</Window>

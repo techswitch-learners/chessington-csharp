@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chessington.GameEngine", "Chessington.GameEngine\Chessington.GameEngine.csproj", "{C68F8B17-F930-4B3D-9F53-1745708B7A31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chessington.UI", "Chessington.UI\Chessington.UI.csproj", "{2D973A1C-A74B-4645-B38B-A7EFE01649BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chessington.GameEngine.Tests", "Chessington.GameEngine.Tests\Chessington.GameEngine.Tests.csproj", "{5FC8FF41-4D06-44BA-A73D-AEEE17195C85}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C68F8B17-F930-4B3D-9F53-1745708B7A31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C68F8B17-F930-4B3D-9F53-1745708B7A31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C68F8B17-F930-4B3D-9F53-1745708B7A31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C68F8B17-F930-4B3D-9F53-1745708B7A31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D973A1C-A74B-4645-B38B-A7EFE01649BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D973A1C-A74B-4645-B38B-A7EFE01649BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D973A1C-A74B-4645-B38B-A7EFE01649BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D973A1C-A74B-4645-B38B-A7EFE01649BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FC8FF41-4D06-44BA-A73D-AEEE17195C85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FC8FF41-4D06-44BA-A73D-AEEE17195C85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FC8FF41-4D06-44BA-A73D-AEEE17195C85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FC8FF41-4D06-44BA-A73D-AEEE17195C85}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
