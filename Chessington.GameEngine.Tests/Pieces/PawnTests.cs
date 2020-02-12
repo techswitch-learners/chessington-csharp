@@ -30,5 +30,29 @@ namespace Chessington.GameEngine.Tests.Pieces
 
             moves.Should().Contain(Square.At(5, 0));
         }
+        
+        [Test]
+        public void WhitePawns_CannotMoveBackwards()
+        {
+            var board = new Board();
+            var pawn = new Pawn(Player.White);
+            board.AddPiece(Square.At(4, 0), pawn);
+
+            var moves = pawn.GetAvailableMoves(board);
+
+            moves.Should().NotContain(Square.At(5, 0));
+        }
+        
+        [Test]
+        public void BlackPawns_CannotMoveBackwards()
+        {
+            var board = new Board();
+            var pawn = new Pawn(Player.Black);
+            board.AddPiece(Square.At(4, 0), pawn);
+
+            var moves = pawn.GetAvailableMoves(board);
+
+            moves.Should().NotContain(Square.At(3, 0));
+        }
     }
 }
